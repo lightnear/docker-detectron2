@@ -49,8 +49,8 @@ RUN curl -fsSL -v -o ~/miniconda.sh -O  https://repo.anaconda.com/miniconda/Mini
 
 RUN pip install --user cmake \
   && pip install --user cython pyyaml matplotlib scipy opencv-python tqdm augmentor tensorboard numpy pandas ibm_db \
-  && conda install -y pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia \
-  && python -m pip install detectron2==0.5 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu111/torch1.9/index.html \
+  && conda install -y pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=11.0 -c pytorch \
+  && python -m pip install detectron2==0.4 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu110/torch1.7/index.html \
   && conda clean -ya \
   && pip cache purge
 
