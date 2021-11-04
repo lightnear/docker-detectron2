@@ -2,7 +2,7 @@ name: detectron2
 
 on:
   schedule:
-    - cron: '0 10 * * *' # everyday at 10am
+    - cron: '0 1 * * 1' # every monday at 1am
   push:
     branches:
       - 'main'
